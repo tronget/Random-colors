@@ -1,0 +1,89 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Mono', sans-serif;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(230px, 1fr));
+	grid-auto-flow: dense;
+}
+.btn {
+	font-size: 1rem;
+	border: none;
+	font-family: inherit;
+	cursor: pointer;
+	background-color: rgba(240, 248, 255, 0.74);
+}
+.background {
+	transition: .2s;
+	width: 100%;
+	min-height: 230px;
+	transition: color .2s;
+	display: flex;
+	transition: .2s;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	width: 85%;
+	max-width: 800px;
+	text-align: center;
+	position: relative;
+}
+.color-copy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+	background-color: rgba(240, 248, 255, 0.527);
+}
+.color {
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.generate {
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: -50px;
+	font-size: 1.1rem;
+	padding: 5px 10px;
+}
+.duplicate {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+svg {
+	width: 30px;
+	height: auto;
+	cursor: pointer;
+}
+path {
+	pointer-events: none;
+}
+.copy-wrapper {
+	position: absolute;
+	right: 10%;
+}
+.copy-wrapper p {
+	position: absolute;
+	display: none;
+	top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: cornflowerblue;
+	max-width: min-content;
+	margin: 0;
+	padding: 3px 6px;
+	color: #fff;
+}

@@ -8,10 +8,10 @@ let cnt = -1;
 function generateColor() {
 	let randomColor = '';
 	for (let i = 0; i < 3; i++) {
-		let num = new Number;
+		let num = new Number();
 		num += Math.round(Math.random() * 255);
 		num = num.toString(16);
-		if (num.length === 1) num += num; 	// Удваивание числа если оно однозначное
+		if (num.length === 1) {num += num;} 	// Удваивание числа если оно однозначное
 		randomColor += num;
 	}
 	randomColor = randomColor.toUpperCase();
@@ -29,16 +29,16 @@ function setColor(e) {
 function copyColor(e) {
 	navigator.clipboard.writeText(e.target.closest('.copy-wrapper').previousElementSibling.textContent);
 	e.target.previousElementSibling.style.display = 'block';
-	setTimeout(() => {e.target.previousElementSibling.style.display = 'none'}, 1200);
-	console.log(e.target)
+	setTimeout(() => {e.target.previousElementSibling.style.display = 'none';}, 1200);
+	console.log(e.target);
 }
 
 // initialize
 function initialize() {
 	let generColor = generateColor();
-	bcgs[cnt].style.backgroundColor = `#${generColor}`
+	bcgs[cnt].style.backgroundColor = `#${generColor}`;
 	colors[cnt].textContent = generColor;
-};
+}
 
 // duplicate
 duplicateBtn.addEventListener('click', duplicate);
